@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import TTGSnackbar
 
 public class CustomRoundedView {
     
@@ -26,6 +27,11 @@ public class CustomRoundedView {
         view.clipsToBounds = true
         view.layer.cornerRadius = 10
         view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Bottom right corner, Bottom left corner respectively
+    }
+    
+    public static func showDisplayMessage(message: String) {
+        let display = TTGSnackbar(message: message, duration: .long)
+        display.show()
     }
     
 }

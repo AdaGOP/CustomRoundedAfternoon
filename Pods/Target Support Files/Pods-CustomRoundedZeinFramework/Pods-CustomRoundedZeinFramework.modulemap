@@ -1,0 +1,6 @@
+framework module Pods_CustomRoundedZeinFramework {
+  umbrella header "Pods-CustomRoundedZeinFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

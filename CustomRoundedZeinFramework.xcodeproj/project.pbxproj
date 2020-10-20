@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		E6FCA2E6253ECFC100923D95 /* CustomRoundedZeinFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FCA2E4253ECFC100923D95 /* CustomRoundedZeinFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6FCA2ED253ED11800923D95 /* CustomRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCA2EC253ED11800923D95 /* CustomRoundedView.swift */; };
+		F700E226C89B188922E2A0CF /* Pods_CustomRoundedZeinFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29CCDDD3BDA9670960828A /* Pods_CustomRoundedZeinFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F059F04132E55F6D2D52E32 /* Pods-CustomRoundedZeinFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomRoundedZeinFramework.debug.xcconfig"; path = "Target Support Files/Pods-CustomRoundedZeinFramework/Pods-CustomRoundedZeinFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		A629F942A5930EAC359D335E /* Pods-CustomRoundedZeinFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomRoundedZeinFramework.release.xcconfig"; path = "Target Support Files/Pods-CustomRoundedZeinFramework/Pods-CustomRoundedZeinFramework.release.xcconfig"; sourceTree = "<group>"; };
+		AA29CCDDD3BDA9670960828A /* Pods_CustomRoundedZeinFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomRoundedZeinFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FCA2E1253ECFC100923D95 /* CustomRoundedZeinFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomRoundedZeinFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6FCA2E4253ECFC100923D95 /* CustomRoundedZeinFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomRoundedZeinFramework.h; sourceTree = "<group>"; };
 		E6FCA2E5253ECFC100923D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -23,17 +27,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F700E226C89B188922E2A0CF /* Pods_CustomRoundedZeinFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AD7D6F94F9E3216A0001B3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F059F04132E55F6D2D52E32 /* Pods-CustomRoundedZeinFramework.debug.xcconfig */,
+				A629F942A5930EAC359D335E /* Pods-CustomRoundedZeinFramework.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		518108010F684C2B8983F068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA29CCDDD3BDA9670960828A /* Pods_CustomRoundedZeinFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E6FCA2D7253ECFC100923D95 = {
 			isa = PBXGroup;
 			children = (
 				E6FCA2E3253ECFC100923D95 /* CustomRoundedZeinFramework */,
 				E6FCA2E2253ECFC100923D95 /* Products */,
+				1AD7D6F94F9E3216A0001B3F /* Pods */,
+				518108010F684C2B8983F068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6FCA2E9253ECFC100923D95 /* Build configuration list for PBXNativeTarget "CustomRoundedZeinFramework" */;
 			buildPhases = (
+				0866378E100E946C746839EE /* [CP] Check Pods Manifest.lock */,
 				E6FCA2DC253ECFC100923D95 /* Headers */,
 				E6FCA2DD253ECFC100923D95 /* Sources */,
 				E6FCA2DE253ECFC100923D95 /* Frameworks */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0866378E100E946C746839EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomRoundedZeinFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6FCA2DD253ECFC100923D95 /* Sources */ = {
@@ -264,6 +315,7 @@
 		};
 		E6FCA2EA253ECFC100923D95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F059F04132E55F6D2D52E32 /* Pods-CustomRoundedZeinFramework.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +342,7 @@
 		};
 		E6FCA2EB253ECFC100923D95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A629F942A5930EAC359D335E /* Pods-CustomRoundedZeinFramework.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
